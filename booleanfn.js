@@ -9,5 +9,5 @@ function likeIt(b, k) {
     }
       
 }
-likeIt(1, 10);.
+likeIt(1, 10);
 

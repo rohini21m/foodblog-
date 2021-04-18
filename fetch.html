@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name ="viewport" content ="width=device-width,initial-scale=1">
+    <script
+        
+        type ="text/javascript" src="users.json">
+        </script>
+          </head>
+        
+        <title>Fetch API </title>
+        <body>
+            <button  id="GetHi"> click on it </button>
+            <button  id="you"> you</button>
+            <button  id="students"> student</button>
+            <div id="output"></div>
+        <script>
+                
+                    
+                document.getElementById("you").addEventListener('click', you);
+                function you()
+                {
+                    fetch('https://jsonplaceholder.typicode.com/posts')
+                    .then((res)=> res.json())
+                    .then((data)=> {
+                        let output = `<h2>posts</h2>`;
+                        data.forEach(function(posts){
+                            output += `
+                            <ul>
+                               <li> Id: ${posts.id}</li>
+                                
+                                <li> title: ${posts.title}</li>
+                                <li> body: ${posts.body}</li>
+                            </ul>
+                            `;
+                        });
+                        document.getElementById('output').innerHTML= output;
+
+                    }
+                    
+                    )
+
+                    
+                }
+
+                document.getElementById("students").addEventListener('click', students);
+                function students()
+                {
+                    fetch('./users.json')
+                    .then((res)=> res.json())
+                    .then((data)=> {
+                        let output = `<h2>students</h2>`;
+                        data.forEach(function(students){
+                            output += `
+                            <ul>
+                               <li> Id: ${students.id}</li>
+                                
+                                <li> email:${students.email}</li>
+                                <li>name: ${students.name} </li>
+                            </ul>
+                            `;
+                        });
+                        document.getElementById('output').innerHTML= output;
+                    }
+                    
+                    )
+
+                    
+                }
+
+            
+        </script>
+        </body>
+  
+    </html>

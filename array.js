@@ -20,5 +20,37 @@ console.log(disney);
 
 
 
+var arr = [
+    'jyo', 'rose', 'lisa',23, true, [67, 65, 100], function(name)
+    {
+        return 'bye ' + name;
+    }
+];
+console.log(arr[6](arr[1]));
+console.log("hey guys Im " + arr[6](arr[2]) + 'MY AGE  IS '+ arr[5][1]);
+
+
+
+var colors = ['white', 'blue', 'pink'];
+colors[1 ]= 'red';
+console.log(colors);
+colors.push('violet');
+console.log(colors);
+colors.shift();
+console.log(colors);
+colors.unshift('neon');
+console.log(colors);
+console.log(colors.indexOf('neon'));
+
+if (colors.indexOf('blue') === -1) {  ////here indexof('blue')===-1 represents the value is not present in array.
+    console.log(colors.push('beige') && colors.indexOf('beige'));
+
+}
+
+
+
+
+
+
 
 

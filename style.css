@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent {
+  height: 200vh;
+  border: 20px solid black;
+  display: flex;
+}
+.child1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.child2 {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+
+.child3 {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+}
