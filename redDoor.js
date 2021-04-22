@@ -1,6 +1,7 @@
-
-
-    var his = document.getElementById("jar");
+window.addEventListener('scroll',()=>{
+    var Nav = document.getElementsById("nav");
+    Nav.classList.toggle('sticky',scrollY >0)});
+var his = document.getElementById("jar");
 var hers = document.getElementById("jug");
     hers.style.color = "black";
     his.style.color = "black";
@@ -15,3 +16,21 @@ function changeColor()
 }
 
 window.setTimeout(changeColor,1000);
+
+
+var modalBtn = document.querySelector('.talk');
+var modal = document.querySelector('.modal-btn');
+var modalBg = document.querySelector('.modal-bg');
+var closeBtn = document.querySelector('.close-button');
+
+modalBtn.addEventListener('click', function () {
+    modalBg.classList.add('bg-active');
+});
+modal.addEventListener('click', function () {
+    modalBg.classList.add('bg-active');
+});
+
+closeBtn.addEventListener('click', function () {
+    modalBg.classList.remove('bg-active');
+   
+})
